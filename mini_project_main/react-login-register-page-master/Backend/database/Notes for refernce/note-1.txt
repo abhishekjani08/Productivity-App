@@ -1,0 +1,4 @@
+****************Backend and Server******************
+* Mongoose work as layer on top of the mongodb 
+* Router() works same as a [app.get] to take the request 
+* 

@@ -1,0 +1,170 @@
+    /***    General     ***/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif
+}
+
+body {
+    margin: 0 auto
+}
+
+.m-5-auto {
+    margin: 5rem auto
+}
+
+.primary-button {
+    margin-top: 2rem;
+    margin-right: 1rem;
+    padding: .6rem;
+    width: 10rem;
+    background: #222;
+    border: none;
+    border-radius: 5rem;
+    color: #fff;
+    font-size: 1.2rem;
+    transition: all .5s;
+    cursor: pointer;
+    text-transform: capitalize;
+    display: inline-block;
+    /* align-items: center ; */
+    /* margin: auto; */
+}
+.primary-button:hover{
+    background: rgba(34, 34, 34, 0.795);
+
+
+}
+
+/***    Landing Page     ***/
+.main-title,
+.main-para {
+    color: #f1f1f1;
+    text-align : center;
+
+}
+
+.main-title {
+    padding-top: 10rem;
+    font-size: 3rem;
+    font-family: 'Fascinate', cursive;
+    text-transform: uppercase;
+    text-align : center;
+
+}
+.center{
+    display: inline-block;
+    margin-left: 35%;
+
+}
+
+.main-para {
+    font-size: 2.5rem;
+    text-Transform: capitalize
+}
+
+#reg_btn span {
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+#reg_btn span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+#reg_btn:hover span {
+  padding-right: 25px;
+}
+
+#reg_btn:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+/***    Login Page     ***/
+h2 {
+    font-weight: 300
+}
+
+form {
+    display: inline-block;
+    /* background: #f3f3f3; */
+    background: #9b9898;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 2rem;
+    margin: 2rem 0 1rem 0
+}
+
+form label {
+    float: left;
+    font-size: .9rem;
+    margin: 0;
+    padding: 0
+}
+
+.right-label {
+    float: right;
+    cursor: pointer
+}
+
+input {
+    width: 20rem;
+    height: 1.5rem;
+    padding: .3rem;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    margin: .5rem;
+}
+
+#sub_btn {
+    display: block;
+    width: 100%;
+    padding: .5rem;
+    border: none;
+    background: #222;
+    color: #fff;
+    border-radius: 3px;
+}
+
+#sub_btn:hover {
+    background: #333;
+    transition: all .5s
+}
+
+footer p {
+    margin: 0;
+    font-size: .9rem
+}
+
+/***    Register Page     ***/
+#checkbox {
+    width: 1rem
+}
+
+form span {
+    font-size: .8rem
+}
+
+#reset_pass_lbl {
+    float: left
+}
+
+/***    Home Page     ***/
+.home-page-title {
+    color: #222
+}
+
+h2{
+    color: white;
+    text-align: center;
+    font-size: 2rem;
+}
