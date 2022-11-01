@@ -1,8 +1,6 @@
-<p align="center">
-<img src="https://user-images.githubusercontent.com/34238240/109479789-c5fd4d00-7aa0-11eb-868b-2da35de326b8.png" alt="Fokus Logo">
-</p>
 
-<h3 align="center"> Fokus is a web based productivity tool. Give it a try <a href="https://fokusapp.netlify.app"> here. </a> </h3>
+
+<h3 align="center"> Productivity tool. Give it a try <a href="https://fokusapp.netlify.app"> here. </a> </h3>
 <p align="center">
   <img  src="https://img.shields.io/badge/name-fokus-yellow" alt="Game Ref" />
   <img  src="https://img.shields.io/badge/category-productivity-orange" alt="Application Category" />
@@ -87,37 +85,3 @@ docker run -d --name fokus -p 3000:3000 fokus
 NOTE: There is also an unofficially maintained docker image available at `registry.gitlab.com/brandonbutler/fokus-docker:latest`, see the [fokus-docker](https://gitlab.com/brandonbutler/fokus-docker) project for more information.
 
 <br>
-
-# Contributing
-
-Contributions in any form are encouraged and I would love to merge them back into the codebase. You can help me by:
-
--   :star: STAR this repository :star:
--   :bug: Raising issues or bugs
--   :thumbsup: Helping new users with issues they may encounter 
--   :bulb: Improving documentation or raising your suggestions
--   :arrow_heading_up: Submitting PR with bug fixes or new features
--   :speaking_head: Spreading the word and recommending it to your friends and family
-
-_If you're into react development and interested in contributing, feel free to raise a issue or PR or hit me up on my mail._
-
-<br>
-
-# License GNU GPLv3
-
-I chose this license to ensure this project stays open source and contributor enhancements are made available to the public.
-
-**GNU GPLv3**
-Permissions of this strong copyleft license are conditioned on making available complete source code of licensed works and modifications, which include larger works using a licensed work, under the same license. Copyright and license notices must be preserved. Contributors provide an express grant of patent rights.
-
-See `license` for complete license text.
-
-<br>
-
-<h2 align="center">
-  Open Source
-</h2>
-<p align="center">
-  <sub>Copyright © 2022 Pranav Gupta</sub>
-</p>
-<p align="center">Fokus Code <a href="https://github.com/pg07codes/fokus/blob/master/LICENSE.md">is GNU GPLv3 licensed 💖</a></p>
