@@ -75,9 +75,9 @@ const MenuActionButton = styled.div`
     height: 100%;
     cursor: pointer;
     svg {
-        padding: 1px 10px;
+        padding: 1px 1px;
         color: ${(p) => p.theme.primaryText};
-        font-size: 1em;
+        font-size: 1.5em;
     }
     &:hover {
         background-color: ${(p) => p.theme.backgroundSecondary};
