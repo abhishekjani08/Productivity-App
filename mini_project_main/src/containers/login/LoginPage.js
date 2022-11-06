@@ -1,49 +1,50 @@
-import React , {useState , useEffect} from 'react'
+import React, { useState, useEffect } from 'react'
+import { BsFillBackspaceFill } from 'react-icons/bs';
 // var fetch = require("fetch");
 
-import { Link , useHistory} from 'react-router-dom'
-
-import "../App1.css"
-
+import { Link, useHistory } from 'react-router-dom'
+import "../LoginPage.css"
+// import "../App1.css"
+import BackgroundImage from './login.png'
 
 
 export default function LoginPage() {
     let history = useHistory();
- 
+
 
     //body will send the data item but it will nto accept the data directly its need to convert it into the string
-    const [credentials , setCredentials] = useState({email: "" , password : ""})
+    const [credentials, setCredentials] = useState({ email: "", password: "" })
 
-    const handleSubmit =  async (e) =>{
-      
+    const handleSubmit = async (e) => {
+
         // console.log(e)
         e.preventDefault();
-        const response = await fetch("/api/user/login" , {
-            method: "POST" ,
-            headers :{  
-                'Content-Type' : 'application/json'
+        const response = await fetch("/api/user/login", {
+            method: "POST",
+            headers: {
+                'Content-Type': 'application/json'
             },
-            body : JSON.stringify({email:  credentials.email , password : credentials.password})
-    
+            body: JSON.stringify({ email: credentials.email, password: credentials.password })
+
         });
         const json = await response.json()
         console.log("hello!!!" + json)
         // console.log(json.sucess)
-        if(json.sucess){
+        if (json.sucess) {
             //save the autheotkem and redirect      
-            localStorage.setItem('token' , json.authtoken)
+            localStorage.setItem('token', json.authtoken)
             alert("User Login Successfully Welcome to dashboard!!")
             history.push("/dashboard")
 
         }
-        else{   
+        else {
             alert("Invalid credential")
         }
-    
+
     }
 
-    const onChange =(e)=>{
-        setCredentials({...credentials , [e.target.name] : e.target.value})
+    const onChange = (e) => {
+        setCredentials({ ...credentials, [e.target.name]: e.target.value })
 
     }
 
@@ -58,7 +59,7 @@ export default function LoginPage() {
     //     value = e.target.value; //zaidkhan1681@gmail.com
     //     setUser({... user, [name] : value}) //Here i am storin the data-value to the respected place of variable
 
-       
+
     // }//hooks setting the value
 
     // const PostData = async(e) =>{
@@ -81,8 +82,8 @@ export default function LoginPage() {
     //     });
     //     const json = await response.json()
     //         console.log(json)
-        
-         
+
+
 
     //     const data = await response.json();
     //     if (data.status === 400 || !data){
@@ -97,34 +98,49 @@ export default function LoginPage() {
 
     //     }
 
-        
+
 
     // }
 
+    const header = {
+        width: "100%",
+        height: "150%",
+        background: `url(${BackgroundImage})`,
+        backgroundPosition: "top right",
+        padding: "0 px",
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "50% 50%" //cover 
+    }
+
+        const header2 = {
+            color: "black",
+        }
     
+
     return (
-        <div className="text-center m-5-auto" >
-            <h2 >Sign in to us</h2>
-            <form  method="POST" onSubmit={handleSubmit} >
-               
-                 <p> 
-                    <label>email address </label><br/>
-                    <input type="text" name="email" value={credentials.email } onChange={onChange}  />
-                </p>
-                <p>
-                    <label>Password</label>
-                    {/* <Link to="/forget-password"><label className="right-label">Forget password?</label></Link> */}
-                    <br/>
-                    <input type="password" name="password" value={credentials.password} required onChange={onChange}/>
-                </p>
-                <Link to="/dashboard">
-                <button className="primary-button" onClick={handleSubmit} >Log in</button>
-            </Link>
-            </form>
-            <footer>
-                <p>First time? <Link to="/register">Create an account</Link>.</p>
-                <p><Link to="/" className='primary-button'>Back to Homepage</Link>.</p>
-            </footer>
+        <div className="text-center m-5-auto" style={header}>
+            <div className='text-left'>
+                <h2 style={header2} className="sign">Sign In</h2>
+                <form method="POST" onSubmit={handleSubmit} className="form">
+                        <p>
+                            <label>Email address </label><br />
+                            <input type="text" name="email" value={credentials.email} onChange={onChange} />
+                        </p>
+                        <p>
+                            <label>Password</label>
+                            {/* <Link to="/forget-password"><label className="right-label">Forget password?</label></Link> */}
+                            <br />
+                            <input type="password" name="password" value={credentials.password} required onChange={onChange} />
+                        </p>
+                        <Link to="/dashboard">
+                            <button className="secondary-button" onClick={handleSubmit} >Log in</button>
+                        </Link>
+                </form>
+                <footer >
+                    <p className='footer1'>Need an account? <Link to="/register">Signup</Link>.</p>
+                    <p className='footer2'><Link to="/" className='secondary-button'>Homepage</Link>.</p>
+                </footer>
+            </div >
         </div>
     )
 }
@@ -145,7 +161,8 @@ export default function LoginPage() {
 
 
 
-   // const history = useHistory();  
+
+   // const history = useHistory();
 
 
     // const [name , setName] = useState("");
@@ -167,7 +184,7 @@ export default function LoginPage() {
     //         // url: "/api/user/login",
     //         headers :{
     //             'Content--Type' : 'application/json',
-    //             'Accept': "application/json, text/plain, */*",
+    //             'Accept': "application/json, text/plain, /",
     //             "Accept" : "application/json",
     //             'Origin' : 'http://localhost:5000'
     //         },

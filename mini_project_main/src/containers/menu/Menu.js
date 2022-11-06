@@ -5,8 +5,8 @@ import { IoMdAnalytics } from "react-icons/io";
 import { BiExclude, BiNotepad } from "react-icons/bi";
 import { NavLink } from "react-router-dom";
 import ReactTooltip from "react-tooltip";
-import logo from "./../../images/logo.svg";
-import namedLogoLight from "./../../images/namedLogoDark.svg";
+import logo from "./../../images/DEF.png";
+// import namedLogoLight from "./../../images/abcd.png";
 import "./Menu.css"
 
 const MenuContainer = styled.div`
@@ -30,8 +30,8 @@ const AppLogoContainer = styled.div`
     width: 100%;
     top: 25px;
     left: 5px;
-    img {
-        width: 60%;
+        img {
+        width: 50%;
     }
     /* background-color:pink; */
 `;
@@ -44,6 +44,8 @@ const AppTextLogoContainer = styled.div`
     position: absolute;
     width: 100%;
     bottom: 15px;
+    margin-right: 20px;
+
     img {
         width: 75%;
     }
@@ -54,7 +56,7 @@ const activeClassName = "nav-item-active";
 const MenuOptions = styled(NavLink).attrs({ activeClassName })`
     display: flex;
     justify-content: center;
-    margin: 7px 0;
+    margin: 10px 0;
     border-radius: 0 5px 5px 0;
     background-color: #020202;
     svg {
@@ -111,7 +113,7 @@ export default function Menu() {
         <MenuContainer>
             <AppLogoContainer>
                 <div class="dropdown">
-                    <img src={logo} alt="logo" className="mylogo" style={{ "width": "50px", "height": "50px ", "border-radius": "50%" }} />
+                    <img src={logo} alt="logo" className="mylogo" style={{ "width": "50px", "height": "50px " }} />
                     <a class="btn btn-secondary dropdown-toggle mybtn" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 
                     </a>
@@ -148,9 +150,9 @@ export default function Menu() {
                 <ReactTooltip id="settings" getContent={() => "Settings"} />
             </MenuOptions>
 
-            <AppTextLogoContainer>
-                <img src={namedLogoLight} alt="fokus" />
-            </AppTextLogoContainer>
+            {/* <AppTextLogoContainer>
+                {/* <img src={namedLogoLight} alt="fokus" /> */}
+            {/* </AppTextLogoContainer>  */}
         </MenuContainer>
     );
 }
