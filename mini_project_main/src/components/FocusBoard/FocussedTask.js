@@ -203,7 +203,7 @@ export function FocussedTask() {
                 dispatch(tick({ focussedTaskIndex, deltaMS }));
             } else if (focussedTask.remainingTime === 0) {
                 dingSoundElement.play();
-                if(document.hidden) updatePageTitle(`Fokus: TIMER UP!!!`);
+                if (document.hidden) updatePageTitle(`Fokus: TIMER UP!!!`);
                 dispatch(toggleSoundscapeState(false));
                 dispatch(toggleIsRunning({ idx: focussedTaskIndex }));
                 if (autoCompleteZeroTimeTask) {
@@ -227,11 +227,36 @@ export function FocussedTask() {
     function playPauseHandler(focussedTaskIndex, wasTaskRunning) {
         dispatch(toggleIsRunning({ idx: focussedTaskIndex }));
         if (wasTaskRunning) {
-            updatePageTitle("Fokus");
+            updatePageTitle("Task Started");
             dispatch(toggleSoundscapeState(false));
+
         } else {
-            updatePageTitle(`Fokus: ${focussedTask.content}`);
+            updatePageTitle(`Task: ${focussedTask.content}`);
             dispatch(toggleSoundscapeState(true));
+            
+            let timeout1;
+            let timeout2;
+            let timeout3;
+            let timeout4;
+            timeout1 = setTimeout(alertFunc1, 300000);
+            timeout2 = setTimeout(alertFunc2, 600000);
+            timeout3 = setTimeout(alertFunc3, 900000);
+            timeout4 = setTimeout(alertFunc4, 1200000);
+            function alertFunc1() {
+                alert("Reminder!! 5 minutes completed");
+            }
+
+            function alertFunc2() {
+                alert("Reminder!! 10 minutes completed");
+            }
+
+            function alertFunc3() {
+                alert("Reminder!! 15 minutes completed");
+            }
+
+            function alertFunc4() {
+                alert("Reminder!! 20 minutes completed");
+            }
         }
     }
 
