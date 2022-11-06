@@ -13,6 +13,8 @@ ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
       <App />
+
+      {/* h1hehe */}
     </Provider>
   </React.StrictMode>,
   document.getElementById('root')
