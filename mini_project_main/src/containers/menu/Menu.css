@@ -1,0 +1,27 @@
+.dropdown{
+    /* width: 30px; */
+    display: inline-block;
+    /* height: 30px ; */
+    /* background-color: black; */
+
+}
+.mybtn{
+    height: 30px;
+    width: 30px;
+    border-radius: 10%;
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+    text-align:center;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    margin: 10px 0px 0px -5px;
+}
+
+.butt{
+    margin-left: 25px;
+    /* border-radius: 20%; */
+    color: black;
+    background-color: rgba(255, 255, 0, 0.849);
+    width: 100px;
+}
