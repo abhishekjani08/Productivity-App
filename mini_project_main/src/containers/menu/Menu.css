@@ -1,6 +1,6 @@
 .dropdown{
     /* width: 30px; */
-    display: flex;
+    display: inline-block;
     /* height: 30px ; */
     /* background-color: black; */
 
@@ -16,4 +16,12 @@
     align-items: center;
     border: none;
     margin: 10px 0px 0px -5px;
+}
+
+.butt{
+    margin-left: 25px;
+    /* border-radius: 20%; */
+    color: black;
+    background-color: rgba(255, 255, 0, 0.849);
+    width: 100px;
 }

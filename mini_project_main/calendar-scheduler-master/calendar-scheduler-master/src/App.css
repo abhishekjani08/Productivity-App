@@ -1,0 +1,39 @@
+.App {
+  text-align: center;
+}
+h1{
+  color: rgb(255, 166, 0);
+}
+
+#Calendar {
+  height: 100%;
+  width: 80%;
+  margin: auto;
+  margin-top:50px;
+  margin-bottom: 50px;
+  /* background: yellow; */
+}
+
+.rbc-month-view{
+  flex-basis: 500px !important;
+}
+
+.rbc-toolbar-label {
+  font-weight: bold;
+  font-size: 22px;
+  color: rgb(37, 66, 197)
+}
+
+.rbc-date-cell {
+  color: rgb(15, 114, 226);
+}
+
+.rbc-today {
+  background-color: rgb(196, 226, 250) !important;
+}
+
+@media (max-width: 480px) {
+  .rbc-toolbar {
+    display: block !important;
+  }
+}

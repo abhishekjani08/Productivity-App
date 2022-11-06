@@ -1,7 +1,8 @@
 import React, {useState} from 'react'
 import { Link , useHistory} from 'react-router-dom'
-
-import "./App1.css"
+import "./Register.css";
+import Bg from "./reg.png";
+// import "./App1.css"
 
 
 /* 1. usrname 2. email 
@@ -48,85 +49,20 @@ export default function SignUpPage() {
 
     }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    //thp code
-    // const history = useHistory();
-
-
-    // const [user , setUser] = useState({
-    //     name : "" ,email : "" , password : "" , cpassword:""
-    // })
-    // let name , value;
-    // const onChange =(e)=>{
-    //     console.log(e) ;
-    //     name =  e.target.name; //email
-    //     value = e.target.value; //zaidkhan1681@gmail.com
-    //    setUser({... user, [name] : value}) //Here i am storin the data-value to the respected place of variable
-    // }//hooks setting the value
-
-
-
-    // //posting data to the database
-    // const PostData = async(e) =>{
-    //     e.preventDefault(); //preventing from loading  of  dashboard
-    //     //here by using the object destructring we are not getting the data int he form of user.email or user.password 
-    //     //here we are simply fetching the data input by the user
-    //     const {name , email , password , cpassword} = user //usr.name, user.email, user.pasword, object destructuring
-
-    //     //putting the data at the backend using fetch
-    //     //porpertiesof fetch is mthiod, header
-    //     //servre doesnt usderdtand json
-    //     const res = await fetch("/api/user/cal",{
-    //         method : "POST" ,
-    //         header:{
-    //             "Content-Type" :"application/json"
-    //         } ,
-    //         body : JSON.stringify({
-    //             name,
-    //             email,
-    //             password,
-    //             cpassword
-    //         })
-
-    //     });
-
-    //     //checkign the data inputted by the user
-    //     const data = await res.json();
-    //     if (data.status === 400 || !data){
-    //         window.alert("Invalid Registration")
-    //         console.log("Invalid Registration")
-
-    //     }
-    //     else{
-    //         window.alert("Registration Success")
-    //         console.log("Registration Success")
-    //         history.push("/dashboard")
-
-    //     }
-
-    // }
-
-    
+    const header = {
+        width: "100%",
+        height: "180%",
+        background: `url(${Bg})`,
+        backgroundPosition: "top right",
+        padding: "0 px",
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "50% 50%" //cover 
+    }
 
     return (
-        <div className="text-center m-5-auto">
-            <h2>Join us</h2>
-            <h5>Create your personal account</h5>
-            <form method= "POST" action="/home">
+        <div className="text-left m-5-auto" style={header}>
+            <h2 className='join'>Join us</h2>
+            <form method= "POST" action="/home" className='form'>
                 <p>
                     <label>Username</label><br/> 
                     <input type="text" name="name"   onChange={onChange}/>
@@ -147,11 +83,11 @@ export default function SignUpPage() {
                     <input type="checkbox" name="checkbox" id="checkbox" required /> <span>I agree all statements in <a href="https://google.com" target="_blank" rel="noopener noreferrer">terms of service</a></span>.
                 </p> */}
               <Link to="/dashboard">
-                <button className="primary-button" onClick={handleSubmit} >Log in</button>
+                <button className="primary-button" onClick={handleSubmit} id="butt1">Log in</button>
             </Link>
             </form>
             <footer>
-                <p><Link to="/"><button>Back to homepage</button></Link>.</p>
+                <p><Link to="/"><button className="primary-button" id="butt2">Homepage</button></Link></p>
             </footer>
         </div>
     )

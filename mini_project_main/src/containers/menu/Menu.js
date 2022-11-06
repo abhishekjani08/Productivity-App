@@ -8,6 +8,7 @@ import ReactTooltip from "react-tooltip";
 import logo from "./../../images/DEF.png";
 // import namedLogoLight from "./../../images/abcd.png";
 import "./Menu.css"
+import { BrowserRouter as Router, Link, Route } from "react-router-dom";
 
 const MenuContainer = styled.div`
     width: 10%;
@@ -109,6 +110,8 @@ export default function Menu() {
     //         )
 
     //     }
+
+
     return (
         <MenuContainer>
             <AppLogoContainer>
@@ -119,9 +122,9 @@ export default function Menu() {
                     </a>
 
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                        <a class="dropdown-item" href="#">Logout</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <a class="dropdown-item" href="#">Something else here</a>
+                    <Link to="/login">
+                            <button className="butt"> Log out </button>
+                        </Link>
                     </div>
                 </div>
             </AppLogoContainer>
