@@ -104,7 +104,7 @@ export default function LoginPage() {
 
     const header = {
         width: "100%",
-        height: "150%",
+        height: "180%",
         background: `url(${BackgroundImage})`,
         backgroundPosition: "top right",
         padding: "0 px",
@@ -121,7 +121,7 @@ export default function LoginPage() {
         <div className="text-center m-5-auto" style={header}>
             <div className='text-left'>
                 <h2 style={header2} className="sign">Sign In</h2>
-                <form method="POST" onSubmit={handleSubmit} className="form">
+                <form method="POST" onSubmit={handleSubmit} id="form">
                         <p>
                             <label>Email address </label><br />
                             <input type="text" name="email" value={credentials.email} onChange={onChange} />
@@ -137,8 +137,8 @@ export default function LoginPage() {
                         </Link>
                 </form>
                 <footer >
-                    <p className='footer1'>Need an account? <Link to="/register">Signup</Link>.</p>
-                    <p className='footer2'><Link to="/" className='secondary-button'>Homepage</Link>.</p>
+                    <p className='footer1'>Need an account? <Link to="/register" id="signup">Signup</Link></p>
+                    <p className='footer2'><Link to="/" className='secondary-button'>Homepage</Link></p>
                 </footer>
             </div >
         </div>

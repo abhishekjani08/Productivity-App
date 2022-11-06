@@ -2,26 +2,31 @@
     background: rgba(34, 34, 34, 0.795);
 }
 
-.form{
-    margin-left: 100px;
+#form{
+    margin-right: 60px;
+    margin-left: 60px;
 }
 
 .sign{
     align-items:"left";
-    margin-right: 50%;
+    margin-right: 60%;
 }
 
 .footer1
 {
-    margin-right: 650px;
+    margin-right: 720px;
     text-align: center;
 }
-
+#signup{
+    text-decoration:underline;
+    /* text-transform: capitalize; */
+    text-decoration: solid;
+    font-weight: bold;
+}
 .footer2
 {
     padding-top: 20px;
-
-    margin-right: 720px;
+    margin-right: 800px;
     text-align: center;
     /* margin-bottom: 60px; */
 }
