@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import betaLogoLight from "./../../images/betaLogoLight.svg";
+import betaLogoLight from "./../../images/abcd.png";
 import betaLogoDark from "./../../images/betaLogoDark.svg";
 import { DayDate } from "./../../components/dashBoard/DayDate";
 import { useSelector } from "react-redux";
@@ -13,6 +13,7 @@ const DashboardHeroContainer = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    padding-top:20px;
     /* background-color: purple; */
 `;
 
@@ -69,15 +70,7 @@ export function DashboardHero(p) {
                 <img src={darkTheme ? betaLogoDark : betaLogoLight} alt="fokus" />
                 <DayDate />
             </DashboardHeroDiv>
-            <FokusUsageTips>
-                <TipIcon>
-                    <span>TIP</span>
-                </TipIcon>
-                <p>{getFokusUsageTip().tip}</p>
-                {/* <p>{getFokusUsageTip().tip}</p>
-                <p>{getFokusUsageTip().tip}</p> */}
-            </FokusUsageTips>
-        {/* </div> */}
+            
         </DashboardHeroContainer>
     );
 }

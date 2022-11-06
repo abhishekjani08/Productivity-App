@@ -1,0 +1,49 @@
+.primary-button:hover{
+    background: rgba(34, 34, 34, 0.795);
+}
+
+.form{
+    margin-left: 100px;
+}
+
+.sign{
+    align-items:"left";
+    margin-right: 50%;
+}
+
+.footer1
+{
+    margin-right: 650px;
+    text-align: center;
+}
+
+.footer2
+{
+    padding-top: 20px;
+
+    margin-right: 720px;
+    text-align: center;
+    /* margin-bottom: 60px; */
+}
+
+.secondary-button {
+    margin-left: 70px;
+    width: 10rem;
+    background: #222;
+    border: none;
+    border-radius: 2rem;
+    color: #fff;
+    font-size: 1.2rem;
+    transition: all .5s;
+    cursor: pointer;
+    text-transform: capitalize;
+    display: inline-block;
+    text-align: center;
+
+    /* align-items: center ; */
+    /* margin: auto; */
+}
+
+.text-center{
+    margin-top: 40px;
+}
