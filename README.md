@@ -1,3 +1,4 @@
+![image](https://github.com/abhishekjani08/Productivity-App/assets/88500027/520974b8-8bc7-40b5-9107-173c78f331c8)
 A productivity app is a software application designed to help individuals or teams manage their tasks and optimize their productivity. It provides a centralized platform where users can organize, prioritize, and track their work, ultimately enabling them to accomplish more in less time. Here's a description of a typical productivity app and its key features:
 
 Task Management:
