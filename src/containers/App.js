@@ -10,10 +10,6 @@ import { ThemeProvider } from "styled-components";
 import { lightTheme, darkTheme, GlobalStyles } from "./../helpers/themeStyles";
 import { useSelector } from "react-redux";
 import Notes from "./notes";
-import LandingPage from "../containers/LandingPage"
-import LoginPage from "./login/LoginPage"
-import SignUpPage from "./RegisterPage"
-import Navbar from "./Navbar/Navbar"
 
 
 
@@ -57,22 +53,22 @@ function App() {
                                         <TaskBoard />
                                     </>
                                 </Route>
-                                <Route A path="/dashboard">
+                                <Route A path="/">
                                     <>
-                                       <Navbar/>
+                                       {/* <Navbar/> */}
                                         <Dashboard />
                                         <TaskBoard />
                                     </>
                                 </Route>
-                                <Route path = "/login">
+                                {/* <Route path = "/login">
                                     <LoginPage />
                                 </Route>
                                 <Route exact path = "/Register">
                                     <SignUpPage />
-                                </Route> 
-                                <Route exact path = "/">
+                                </Route>  */}
+                                {/* <Route exact path = "/">
                                     <LandingPage/>
-                                </Route> 
+                                </Route>  */}
                             </Switch>
                         </Router>
                     </AppContainer>
