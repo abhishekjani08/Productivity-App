@@ -1,0 +1,84 @@
+*{   
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif
+}
+
+.primary-button {
+    margin-top: 0rem;
+    margin-right: 1rem;
+    padding: .6rem;
+    width: 10rem;
+    background:#14213D;
+    border: none;
+    border-radius: 5rem;
+    color: #e5e5e5;
+    font-size: 1.2rem;
+    transition: all .5s;
+    cursor: pointer;
+    text-transform: capitalize;
+    display: inline-block;
+    /* align-items: center ; */
+    /* margin: auto; */
+}
+.primary-button:hover{
+    background: rgba(34, 34, 34, 0.795);
+
+
+}
+
+/*    Landing Page     */
+
+.main-para {
+    color: #14213D;
+    text-align : center top;
+    font : 'Poppins';
+    padding : '1 rem' ;
+
+}
+
+.main-title {
+    color: #14213D;
+    padding-top: 1rem;
+    font-size: 3rem;
+    font-family: 'Poppins' bold;
+    text-transform: uppercase;
+    text-align : center;
+
+}
+.center{
+    display: inline-block;
+    margin-left: 35%;
+
+}
+
+.main-para {
+    font-size: 2.5rem;
+    text-Transform: capitalize
+}
+
+#reg_btn span {
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+#reg_btn span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+#reg_btn:hover span {
+  padding-right: 25px;
+}
+
+#reg_btn:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
